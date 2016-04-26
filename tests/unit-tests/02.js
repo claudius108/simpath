@@ -1,6 +1,8 @@
 $(document).ready(function() {
-	$x.instance('test').submission({
-		"resource" : "http://89.33.60.139/tests/simpath/tests/data.xml",
+	$x.submission({
+		"ref" : "simpath:instance('test')",
+		"resource" : $x.utils.baseURI
+				+ "tests/resources/data-01.xml",
 		"mode" : "synchronous",
 		"method" : "get"
 	});

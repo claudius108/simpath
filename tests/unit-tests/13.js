@@ -1,14 +1,18 @@
 $(document).ready(function() {
-	$x.instance('xml-1').submission({
-		"resource" : "http://89.33.60.139/tests/simpath/tests/data.xml",
+	$x.submission({
+		"ref" : "simpath:instance('xml-1')",
+		"resource" : $x.utils.baseURI
+				+ "tests/resources/data-01.xml",
 		"mode" : "synchronous",
 		"method" : "get"
-	});
-	$x.instance('xml-2').submission({
-		"resource" : "http://89.33.60.139/tests/simpath/tests/data.xml",
+	});	
+	$x.submission({
+		"ref" : "simpath:instance('xml-2')",
+		"resource" : $x.utils.baseURI
+				+ "tests/resources/data-01.xml",
 		"mode" : "synchronous",
 		"method" : "get"
-	});
+	});	
 
 	var oIterationNOs = {1 : 1};
 	//var oIterationNOs = {1 : 1, 10 : 1, 100 : 1, 1000 : 1};

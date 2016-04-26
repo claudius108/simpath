@@ -242,11 +242,14 @@
 			</example>
 			<example>
 				<title>Getting an instance with method submission() of instance() function</title>
-				<programlisting>$x.instance('instance1').submission({
-					"resource" : "http://127.0.0.1/tests/simpath/tests/data.xml",
-					"mode" : "synchronous",
-					"method" : "get"
-					});
+				<programlisting>
+	$x.submission({
+		"ref" : "simpath:instance('test')",
+		"resource" : $x.utils.baseURI
+				+ "tests/resources/data-01.xml",
+		"mode" : "synchronous",
+		"method" : "get"
+	});				
 				</programlisting>
 			</example>
 			<example>

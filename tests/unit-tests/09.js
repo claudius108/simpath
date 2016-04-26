@@ -1,9 +1,11 @@
 $(document).ready(function() {
-	$x.instance('test').submission({
-		"resource" : "http://89.33.60.139/tests/simpath/tests/data.xml",
-		"mode" : "synchronous",
-		"method" : "get"
-	});
+		$x.submission({
+			"ref" : "simpath:instance('test')",
+			"resource" : $x.utils.baseURI
+					+ "tests/resources/data-01.xml",
+			"mode" : "synchronous",
+			"method" : "get"
+		});	
         fTest("simpath:instance('test')//*[local-name() = 'note']/@transliteration", "results-1");
         fTest("simpath:instance('test')//*[local-name() = 'name']//@type", "results-2");
         fTest("simpath:instance('test')//@type", "results-3");
