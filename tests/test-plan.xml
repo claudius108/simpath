@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kert:test-plan xmlns="http://www.w3.org/1999/xhtml" xmlns:kert="http://kuberam.ro/ns/kert" xml:base="unit-tests/"
+	test-plan-version="0.4">
+	<kert:description>Test plan for Simpath, an XPath 1.0 / 2.0 browser based engine</kert:description>
+	<kert:version>0.3</kert:version>
+	<kert:results>
+		<!--start of standard results - do not remove them -->
+		<kert:result id="passed" icon-url="../resources/images/passed.png" font-color="white" background-color="green"
+			score="0">Passed</kert:result>
+		<kert:result id="failed" icon-url="../resources/images/failed.png" font-color="white" background-color="red"
+			score="0">Failed</kert:result>
+		<kert:result id="unfound" icon-url="" font-color="white" background-color="black" score="0">Unfound
+		</kert:result>
+		<kert:result id="undefined-result-token" icon-url="" font-color="white" background-color="black" score="0">Undefined
+			result token</kert:result>
+		<!--end of standard results - do not remove them -->
+		<kert:result id="partial" icon-url="" font-color="white" background-color="yellow" score="0">Partial
+		</kert:result>
+		<kert:result id="unknown" icon-url="" font-color="black" background-color="white" score="0">Unknown
+		</kert:result>
+		<kert:result id="deprecated" icon-url="" font-color="white" background-color="green" score="0">Deprecated
+		</kert:result>
+		<kert:result id="timeout" icon-url="" font-color="white" background-color="green" score="0">Timeout
+		</kert:result>
+	</kert:results>
+	<kert:test id="1">
+		<kert:author>Claudius Teodorescu</kert:author>
+		<kert:title>XSLT in JS</kert:title>
+		<kert:version />
+		<kert:description>Tests the speed of running various XSLT transformations from JS.</kert:description>
+		<kert:test-url>01.html</kert:test-url>
+		<kert:source-url>http://89.33.60.139/utils/kert/utils/proxy.php?url=http://89.33.60.139:8080/tests/x-crypt/tests/01.xql?_source=yes
+		</kert:source-url>
+		<kert:assertion>/</kert:assertion>
+		<kert:timeout />
+		<kert:run-status timestamp="" />
+		<kert:development-status timestamp="" />
+		<kert:log />
+		<kert:loops-number />
+		<kert:total-test-time />
+		<kert:type>unattended</kert:type>
+		<kert:assertion-type>assert-xml</kert:assertion-type>
+	</kert:test>
+	<kert:test id="submit-error-event">
+		<kert:author>Claudius Teodorescu</kert:author>
+		<kert:title>'submit-error' event</kert:title>
+		<kert:version />
+		<kert:description>Tests the 'submit-error' event. If an alert appears stating it works, the test is passed.</kert:description>
+		<kert:test-url>submit-error-event.html</kert:test-url>
+		<kert:source-url>http://89.33.60.139/utils/kert/utils/proxy.php?url=http://89.33.60.139:8080/tests/x-crypt/tests/01.xql?_source=yes
+		</kert:source-url>
+		<kert:assertion>/</kert:assertion>
+		<kert:timeout />
+		<kert:run-status timestamp="" />
+		<kert:development-status timestamp="" />
+		<kert:log />
+		<kert:loops-number />
+		<kert:total-test-time />
+		<kert:type>unattended</kert:type>
+		<kert:assertion-type>assert-xml</kert:assertion-type>
+	</kert:test>
+	<!-- <kert:test id="2"> <kert:author>Claudius Teodorescu</kert:author> <kert:title>Function setvalue() of simpath (3.8kB 
+		data)</kert:title> <kert:version/> <kert:description> Testing the speed of running the function setvalue() of Simpath, both 
+		for element and attribute. </kert:description> <kert:test-url>http://89.33.60.139/tests/simpath/tests/02.html</kert:test-url> 
+		<kert:source-url>http://89.33.60.139/utils/kert/utils/proxy.php?url=http://89.33.60.139:8080/tests/x-crypt/tests/02.xql?_source=yes</kert:source-url> 
+		<kert:assertion>/*</kert:assertion> <kert:timeout/> <kert:run-status timestamp=""/> <kert:development-status timestamp=""/> 
+		<kert:log/> <kert:loops-number/> <kert:total-test-time/> <kert:type>unattended</kert:type> <kert:assertion-type>assert-xml</kert:assertion-type> 
+		</kert:test> -->
+	<!-- <kert:test id="9"> <kert:author>Claudius Teodorescu</kert:author> <kert:title>Selection of attributes of the context 
+		node</kert:title> <kert:version/> <kert:description> Testing the speed of selecting attributes of the context node (3.8kB 
+		data). </kert:description> <kert:test-url>http://89.33.60.139/tests/simpath/tests/09.html</kert:test-url> <kert:source-url>http://89.33.60.139/utils/kert/utils/proxy.php?url=http://89.33.60.139:8080/tests/x-crypt/tests/02.xql?_source=yes</kert:source-url> 
+		<kert:assertion>/*</kert:assertion> <kert:timeout/> <kert:run-status timestamp=""/> <kert:development-status timestamp=""/> 
+		<kert:log/> <kert:loops-number/> <kert:total-test-time/> <kert:type>unattended</kert:type> <kert:assertion-type>assert-xml</kert:assertion-type> 
+		</kert:test> -->
+	<!-- <kert:test id="10"> <kert:author>Claudius Teodorescu</kert:author> <kert:title>Selection of child elements of the context 
+		node</kert:title> <kert:version/> <kert:description> Testing the speed of selecting child elements of the context node (3.8kB 
+		data). </kert:description> <kert:test-url>http://89.33.60.139/tests/simpath/tests/09.html</kert:test-url> <kert:source-url>http://89.33.60.139/utils/kert/utils/proxy.php?url=http://89.33.60.139:8080/tests/x-crypt/tests/02.xql?_source=yes</kert:source-url> 
+		<kert:assertion>/*</kert:assertion> <kert:timeout/> <kert:run-status timestamp=""/> <kert:development-status timestamp=""/> 
+		<kert:log/> <kert:loops-number/> <kert:total-test-time/> <kert:type>unattended</kert:type> <kert:assertion-type>assert-xml</kert:assertion-type> 
+		</kert:test> -->
+	<!-- <kert:test id="11"> <kert:author>Claudius Teodorescu</kert:author> <kert:title>Multiple evaluation of a compiled XPath 
+		expression</kert:title> <kert:version/> <kert:description> Testing the speed of evaluation of a compiled XPath expression 
+		(3.8kB data). </kert:description> <kert:test-url>http://89.33.60.139/tests/simpath/tests/09.html</kert:test-url> <kert:source-url>http://89.33.60.139/utils/kert/utils/proxy.php?url=http://89.33.60.139:8080/tests/x-crypt/tests/02.xql?_source=yes</kert:source-url> 
+		<kert:assertion>/*</kert:assertion> <kert:timeout/> <kert:run-status timestamp=""/> <kert:development-status timestamp=""/> 
+		<kert:log/> <kert:loops-number/> <kert:total-test-time/> <kert:type>unattended</kert:type> <kert:assertion-type>assert-xml</kert:assertion-type> 
+		</kert:test> -->
+	<!-- <kert:test id="12"> <kert:author>Claudius Teodorescu</kert:author> <kert:title>XPath expression handler</kert:title> 
+		<kert:version/> <kert:description> Testing the speed of retrieving an XSLT template, and adding values to attributes, by 
+		using classical JS way and new Function(). </kert:description> <kert:test-url>http://89.33.60.139/tests/simpath/tests/09.html</kert:test-url> 
+		<kert:source-url>http://89.33.60.139/utils/kert/utils/proxy.php?url=http://89.33.60.139:8080/tests/x-crypt/tests/02.xql?_source=yes</kert:source-url> 
+		<kert:assertion>/*</kert:assertion> <kert:timeout/> <kert:run-status timestamp=""/> <kert:development-status timestamp=""/> 
+		<kert:log/> <kert:loops-number/> <kert:total-test-time/> <kert:type>unattended</kert:type> <kert:assertion-type>assert-xml</kert:assertion-type> 
+		</kert:test> -->
+	<!-- <kert:test id="13"> <kert:author>Claudius Teodorescu</kert:author> <kert:title>Function instance() (3.8kB data)</kert:title> 
+		<kert:version/> <kert:description> Tests the methods of function instance(). </kert:description> <kert:test-url>http://89.33.60.139/tests/simpath/tests/09.html</kert:test-url> 
+		<kert:source-url>http://89.33.60.139/utils/kert/utils/proxy.php?url=http://89.33.60.139:8080/tests/x-crypt/tests/02.xql?_source=yes</kert:source-url> 
+		<kert:assertion>/*</kert:assertion> <kert:timeout/> <kert:run-status timestamp=""/> <kert:development-status timestamp=""/> 
+		<kert:log/> <kert:loops-number/> <kert:total-test-time/> <kert:type>unattended</kert:type> <kert:assertion-type>assert-xml</kert:assertion-type> 
+		</kert:test> -->
+	<kert:traceability-matrix />
+	<kert:test-tree>
+		<ul id="tree-data">
+			<li data="key: 'xpath-1.0-functions', isFolder: true">
+				XPath 1.0 functions, expressions, and axes
+				<ul>
+					<li data="key: 'tree-3'">Function last()</li>
+					<li data="key: 'tree-10'">Selection of child elements of the context node</li>
+					<li data="key: 'tree-9'">Selection of attributes of the context node</li>
+				</ul>
+			</li>
+			<li data="key: 'xpath-2.0-functions-and-operators', isFolder: true">
+				XPath 2.0 functions and operators
+				<ul>
+					<li data="key: 'tree-4'">XSLT in JS (3.8kB data, set element value template)</li>
+				</ul>
+			</li>
+			<li data="key: 'simpath-built-in-functions', isFolder: true">
+				Built-in functions of Simpath
+				<ul>
+					<li data="key: 'tree-13'">Function instance() (3.8kB data)</li>
+					<li data="key: 'tree-2'">Function setvalue() (3.8kB data)</li>
+					<li data="key: 'tree-6'">Function insert() (3.8kB data)</li>
+					<li data="key: 'tree-7'">Function delete() (3.8kB data)</li>
+					<li data="key: 'tree-8'">Function replace() (3.8kB data)</li>
+					<li data="key: 'tree-11'">Multiple evaluation of a compiled XPath expression</li>
+				</ul>
+			</li>
+			<li data="key: 'simpath-extension-functions', isFolder: true">
+				XPath extension functions of Simpath
+				<ul>
+					<li data="key: 'tree-5'">Function simpath:instance() (3.8kB data)</li>
+				</ul>
+			</li>
+			<li data="key: 'simpath-internal-functions', isFolder: true">
+				Private functions and methods of Simpath
+				<ul>
+					<li data="key: 'tree-1'">XSLT in JS</li>
+					<li data="key: 'tree-12'">XPath expression handler</li>
+
+				</ul>
+			</li>
+			
+			<li data="key: 'events', isFolder: true">
+				Events
+				<ul>
+					<li id="submit-error-event" title="Test 'submit-error' event">'submit-error' event</li>
+
+				</ul>
+			</li>			
+		</ul>
+	</kert:test-tree>
+</kert:test-plan>

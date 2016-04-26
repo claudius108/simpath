@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../utils/kuberaForms/xsl-core/kuberaForms.xsl"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:exkf="http://kuberam.ro" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <title>kuberaForms with XBL, example for xforms:input</title>
+        <xf:model id="model1">
+            <xf:instance id="instance1">
+                <a xmlns="">
+                    <text1>initial value 1</text1>
+                    <ad>
+                        <text>alternative initial value 1</text>
+                        <p>paragraph 1 in text 1</p>
+                    </ad>
+                </a>
+            </xf:instance>
+            <xf:instance id="instance2">
+                <exkf:a>
+                    <exkf:text2 id="22">initial value 2</exkf:text2>
+                </exkf:a>
+            </xf:instance>
+        </xf:model>
+        <xf:model id="model2">
+            <xf:instance id="instance2">
+                <a xmlns="">
+                    <text2>initial value 2</text2>
+                </a>
+            </xf:instance>
+        </xf:model>
+    </head>
+    <body>
+        <xf:input id="input1" ref="make" title="acum1">
+            <xf:label id="input1label">XForms input 01 label: </xf:label>
+        </xf:input>
+        <xf:input id="input2" ref="make" title="acum1">
+            <xf:label id="input1label">XForms input 01 label: </xf:label>
+        </xf:input>
+<!--	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>
+	    <xf:input id="input1" ref="make" title="acum1">
+		    <xf:label id="input1label">XForms input 01 label: </xf:label>
+	    </xf:input>-->
+    </body>
+</html>

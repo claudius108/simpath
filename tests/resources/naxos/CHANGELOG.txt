@@ -1,0 +1,7 @@
+2007-01-26 Version 0.1.1
+Added samples directory.
+Fixed bug: Second part of location path lost result from first part.
+Fixed bug: Template failed to pick up passed parameter when no variables existed.
+
+2007-01-25 Version 0.1
+Inflicted onto the world.

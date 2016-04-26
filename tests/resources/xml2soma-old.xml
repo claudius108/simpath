@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="text"/>
+    <xsl:template match="/">
+	    <xsl:text>[</xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
+    </xsl:template>
+    <xsl:template match="*[position() != last()]">
+		<xsl:call-template name="process_element">
+			<xsl:with-param name="element" select="." />
+		</xsl:call-template>
+		<xsl:text>,</xsl:text>
+    </xsl:template>
+    <xsl:template match="*[position() = last()]">
+		<xsl:call-template name="process_element">
+			<xsl:with-param name="element" select="." />
+		</xsl:call-template>
+    </xsl:template>    
+    <xsl:template match="@*">
+	    <!--name-->
+	    <xsl:text>["</xsl:text><xsl:value-of select="name(.)"/><xsl:text>",</xsl:text>
+	    <!--type-->	
+	    <xsl:text>2,</xsl:text>
+	    <!--value-->
+	    <xsl:text>"</xsl:text><xsl:value-of select="."/><xsl:text>"]</xsl:text>
+    </xsl:template>
+    <xsl:template name="process_element">
+	<xsl:param name="element" />
+	<!--name-->
+	<xsl:text>["</xsl:text><xsl:value-of select="local-name($element)"/><xsl:text>",</xsl:text>
+	<!--content-->
+	<xsl:text>[</xsl:text><xsl:apply-templates select="node()|@*"/><xsl:text>],</xsl:text>
+	<!--type-->	
+	<xsl:text>1,</xsl:text>
+	<!--value-->
+	<xsl:text>"</xsl:text><xsl:value-of select="$element"/><xsl:text>"]</xsl:text>
+    </xsl:template>    
+</xsl:stylesheet>

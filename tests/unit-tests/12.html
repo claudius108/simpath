@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:kert="http://kuberam.ro/ns/kert">
+    <head>
+        <title>XPath expression handler</title>
+        <script type="text/javascript" charset="utf-8" src="../../../utils/jquery/core/jquery.js">/**/</script>
+        <script type="text/javascript" charset="utf-8" src="../../../utils/simpath/core/simpath.js">/**/</script>
+        <script type="text/javascript" charset="utf-8" src="12.js">/**/</script>
+	</head>
+        <body>
+            <h4>Test description:<br/>
+		Testing the speed of retrieving an XSLT template, and adding values to attributes, by using classical JS way and new Function().
+		Before testing, a number 1,000 of XML documents are loaded into $x object, simulating  multiple XPath queries.
+	    </h4>
+            <div id="results-1">
+                <h4>Speed results for classical JS way:</h4>
+                <table></table>
+                <div style="color: red;"></div>
+            </div>
+            <div id="results-2">
+                <h4>Speed results for function construction:</h4>
+                <table></table>
+                <div style="color: red;"></div>
+            </div>
+    </body>
+</html>

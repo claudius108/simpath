@@ -1,0 +1,69 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:kert="http://kuberam.ro/ns/kert">
+    <identifier type="type attribute value 0" invalid="" displayLabel="displayLabel initial value" lang="en" xml:lang="" script="0" transliteration="transliteration attribute value 1"/>
+    <titleInfo lang="en" xml:lang="" type="type attribute value 1" authority="" displayLabel="" script="" transliteration="transliteration attribute value 2" ID="" xlink="">
+        <nonSort/>
+        <title/>
+        <subTitle/>
+        <partNumber/>
+        <partName/>
+    </titleInfo>
+    <name type="type attribute value 2" authority="" ID="" lang="" xml:lang="" script="" transliteration="transliteration attribute value 3" xlink="">text of name element
+        <namePart type="type attribute value 3"/>
+        <description/>
+        <role>
+            <roleTerm type="type attribute value 4" authority=""/>
+        </role>
+    </name>
+    <originInfo lang="" xml:lang="" script="" transliteration="transliteration attribute value 4">
+        <place>
+            <placeTerm type="type attribute value 5"/>
+        </place>
+        <dateIssued encoding="" point="" keyDate="" qualifier="">dateIssued element initial value 1</dateIssued>
+        <dateIssued encoding="" point="" keyDate="" qualifier="">dateIssued element initial value 2</dateIssued>
+        <dateCreated encoding="" point="" keyDate="" qualifier=""/>
+        <dateCaptured encoding="" point="" keyDate="" qualifier=""/>
+        <dateValid encoding="" point="" keyDate="" qualifier=""/>
+        <dateModified encoding="" point="" keyDate="" qualifier=""/>
+        <copyrightDate encoding="" point="" keyDate="" qualifier=""/>
+        <dateOther encoding="" point="" keyDate="" qualifier=""/>
+        <publisher/>
+        <edition/>
+        <issuance/>
+        <frequency/>
+    </originInfo>
+    <genre type="type attribute value 6" authority="" lang="" xml:lang="" script="" transliteration="transliteration attribute value 5"/>
+    <physicalDescription lang="" xml:lang="" script="" transliteration="transliteration attribute value 6">
+        <form type="type attribute value 7" authority=""/>
+        <reformattingQuality/>
+        <internetMediaType/>
+        <extent/>
+        <digitalOrigin/>
+        <note lang="en" xml:lang="" type="type attribute value 8" displayLabel="" script="" transliteration="transliteration attribute value 7" xlink=""/>
+    </physicalDescription>
+    <note lang="en" xml:lang="" type="type attribute value 9" authority="" displayLabel="" script="" transliteration="transliteration attribute value 8" ID="" xlink=""/>
+    <relatedItem type="type attribute value 10">
+        <titleInfo lang="en" xml:lang="" type="type attribute value 11" authority="" displayLabel="" script="" transliteration="transliteration attribute value 9" ID="" xlink="">
+            <nonSort/>
+            <title/>
+            <subTitle/>
+            <partNumber/>
+            <partName/>
+        </titleInfo>
+        <originInfo lang="" xml:lang="" script="" transliteration="transliteration attribute value 10">
+            <place>
+                <placeTerm type="type attribute value 12"/>
+            </place>
+            <dateIssued encoding="" point="" keyDate="" qualifier="">dateIssued element initial value 3</dateIssued>
+            <dateCreated encoding="" point="" keyDate="" qualifier=""/>
+            <dateCaptured encoding="" point="" keyDate="" qualifier=""/>
+            <dateValid encoding="" point="" keyDate="" qualifier=""/>
+            <dateModified encoding="" point="" keyDate="" qualifier=""/>
+            <copyrightDate encoding="" point="" keyDate="" qualifier=""/>
+            <dateOther encoding="" point="" keyDate="" qualifier=""/>
+            <publisher/>
+            <edition/>
+            <issuance/>
+            <frequency/>
+        </originInfo>
+    </relatedItem>
+</mods>

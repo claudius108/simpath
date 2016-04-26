@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="testcase.xsl" ?>
+<div style="background-color:white;">
+	<p>This is an example of the testcase.xsl stylesheet pulled in as "live code"</p>
+	<div style="background-color:yellow;">
+		<liveCode href="file://D:\MyProjects\exslt\document\test\testcase.xsl" />
+	</div>
+</div>

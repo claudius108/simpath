@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<letter>
+  <para>Dear <person/>,</para>
+  <para>We would like to invite you,
+    as a resident of <country/>,
+    to review our new software package.</para>
+  <para>Thank you.</para>
+  <signoff/>
+</letter>

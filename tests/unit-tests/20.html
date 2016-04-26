@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="author" content="David Majda (david@majda.cz)">
+<meta name="copyright" content="Copyright © 2010–2011 David Majda">
+<meta name="keywords" content="parser generator, PEG, JavaScript">
+<meta name="description"
+	content="PEG.js is a parser generator for JavaScript based on the parsing expression grammar formalism.">
+<title>Online version » PEG.js – Parser Generator for JavaScript</title>
+<link rel="stylesheet" href="../data/20_files/content.css">
+<link rel="shortcut icon" href="http://pegjs.majda.cz/favicon.ico"
+	type="image/x-icon" />
+</head>
+<body>
+	<div style="display: none;" id="loader">
+		<div id="loader-inner">Loading...</div>
+	</div>
+
+	<div class="textarea-wrapper">
+		<textarea style="height: 350px; width: 1200px; font-weight: bold; font-size: 18px;" class="code"
+			id="grammar" spellcheck="false"></textarea>
+		<div style="top: 31px; left: 244px; opacity: 0.8; display: none;"
+			class="tooltip">
+			<div class="content">The parser will be generated automatically
+				as you type.</div>
+			<div class="arrow"></div>
+		</div>
+	</div>
+	<div id="build-message" class="message info">
+		Parser built successfully.<span title="Parser build time and speed"
+			class="size-and-time">5.7&nbsp;kB, 556&nbsp;ms, 10&nbsp;kB/s</span>
+	</div>
+	<div class="textarea-wrapper">
+		<textarea style="height: 40px; width: 700px;" class="code" id="input"></textarea>
+		<div style="top: 67px; left: 790px; opacity: 0.8; display: none;"
+			class="tooltip">
+			<div class="content">The input will be processed by the parser
+				automatically as you type.</div>
+			<div class="arrow"></div>
+		</div>
+	</div>
+	<div id="parse-message" class="message error">$x.variables is
+		undefined</div>
+
+	<h2 id="output-header">Output</h2>
+	<pre id="output" class="disabled">Output not available.</pre>
+	<h2 class="suggestion">
+		<span class="step-number">3</span>
+		<div class="step-title">Download the parser code</div>
+	</h2>
+
+	<a id="parser-download" class="" href="#">Download parser</a>
+	<div id="settings">
+		<label for="parser-var">Parser variable:</label> <input
+			id="parser-var" value="$x2._parser" type="text">
+	</div>
+	<script src="../data/20_files/jquery.js"></script>
+	<script src="../data/20_files/peg.js"></script>
+	<script src="../data/20_files/webtoolkit.js"></script>
+	<script src="../data/20_files/jsDump.js"></script>
+	<script src="20.js"></script>
+	<script type="text/javascript" charset="utf-8"
+		src="../../../utils/simpath/core/simpath-v2.js"></script>	
+</body>
+</html>

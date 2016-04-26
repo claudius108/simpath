@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "docbook/dtd/xml/4.2/docbookx.dtd">
+<article>
+	<articleinfo>
+		<title>Documentation for Simpath</title>
+		<abstract>
+			<para>This is the documentation for Simpath, the simpathetic browser-based XPath engine. :)</para>
+		</abstract>
+		<author>
+			<firstname>Claudius</firstname>
+			<surname>Teodorescu</surname>
+			<affiliation>
+				<jobtitle>XML Consultant</jobtitle>
+				<address><email>claudius.teodorescu@gmail.com</email></address>
+			</affiliation>
+		</author>
+		<pubdate>2011-07-08</pubdate>
+	</articleinfo>	
+	<sect1>
+		<title>Purpose</title>
+		<para>This engine is designated to run XPath expressions  and manipulate XML in browser.</para>
+		<para>It runs in all major modern browsers: Opera, Firefox, Google Chrome, Safari, and Internet Explorer (9+).</para>
+	</sect1>
+	<sect1>
+		<title>Scope</title>
+		<para>This engine provides XPath 2.0 functionality and allows XML traversing, basic XML manipulation
+			(set a node/attribute value, insert/delete/replace a node), and XML data instances submission.
+			It provides by default the XPath 1.0 functions for common use (it is lightweight).
+			As to XPath 2.0, the specific functions are provided as extension.
+		</para>
+		<para>Also, simpath contains other extensions (EXSLT) and allows user to add its own extensions.
+		</para>
+		<para>This engine borrows some ideas and approaches from XForms specification.
+		</para>		
+	</sect1>
+	<sect1>
+		<title>Approach</title>
+		<para>Simpath uses browser's built-in XPath and XSLT capabilities.</para>
+		<para>The XML data used for traversing and manipulation is stored as XML documents, so called
+			"data instances".
+		</para>		
+	</sect1>	
+	<sect1>
+		<title>Usage</title>
+		<para>This section presents Simpath's built-in functions.</para>
+		<sect2>
+			<title>Function instance()</title>
+			<para>This function is designated for registering a new data instance with Simpath.</para>
+			<para>Such registered data instance is afterwards used for XML traversing with XPath and XML manipulation.</para>
+			<para>In order to register an XML document as data instance, one has to use method submission() of
+				this function, described below.
+			</para>
+			<para>When a new data instance is registered, Simpath calls a function for 
+				collecting all namespaces of the respective data instance, for future 
+				use for evaluation of XPath expressions. This function is also called 
+				during Simpath initialization, for collecting namespaces declared 
+				in the document.
+			</para>			
+			<para><emphasis>Function parameters:</emphasis></para>
+			<itemizedlist>
+				<listitem><para>sInstanceId: the ID of the registered or to be registered data instance;</para></listitem>
+			</itemizedlist>
+			<para><emphasis>Function output:</emphasis></para>
+			<para>Function outputs an object comprising data instance's properties and methods.</para>
+			<para><emphasis>Function methods:</emphasis></para>
+			<itemizedlist>
+				<listitem>
+					<para>snapshot()</para>
+					<para>This method is used to take a snapshot of the 
+						data instance, as it is at the moment, for further use. For instance, one can take several 
+						snapshots of the data instance after various data manipulations, and register them in order 
+						to have future access to the different stages of processing the respective data instance.
+					</para>					
+					<para><emphasis>Parameters:</emphasis></para>
+					<itemizedlist>
+						<listitem><para>sSnapshotId: the ID of the snapshot.</para></listitem>
+					</itemizedlist>
+					<para><emphasis>Output:</emphasis></para>
+					<para>This method outputs nothing.</para>
+				</listitem>
+				<listitem>
+					<para>source()</para>
+					<para>This method is used to output a data instance serialized to an 
+						XML string.
+					</para>					
+					<para><emphasis>Parameters:</emphasis></para>
+					<itemizedlist>
+						<listitem><para>sSnapshotId: the ID of the snapshot. In case when this 
+							parameter is omitted, the current instance's ID is used.</para></listitem>
+					</itemizedlist>
+					<para><emphasis>Output:</emphasis></para>
+					<para>This method outputs an XML string of the specified data instance snapshot or 
+						data instance itself, in case its parameter is omitted.</para>
+				</listitem>
+				<listitem>
+					<para>reset()</para>
+					<para>This method is used to reset a data instance.</para>					
+					<para><emphasis>Parameters:</emphasis></para>
+					<itemizedlist>
+						<listitem><para>sSnapshotId: the ID of the snapshot. In case when this 
+								parameter is omitted, the instance is reset to its original form.</para></listitem>
+					</itemizedlist>
+					<para><emphasis>Output:</emphasis></para>
+					<para>This method outputs nothing.</para>
+				</listitem>				
+				<listitem>
+					<para>submission()</para>
+					<para>This method is used to submit a data instance by using a protocol.</para>
+					<para><emphasis>Parameters:</emphasis></para>
+					<itemizedlist>
+						<listitem>
+							<para>oConfigOptions: the object containing the 
+							configuration options.
+							</para>
+							<para>Configuration options:</para>
+							<itemizedlist>
+								<listitem>
+									<para>resource: the destination URI for submitting instance data;</para>
+								</listitem>
+								<listitem>
+									<para>mode: the mode of submission, namely "synchronous" or "asynchronous";</para>
+								</listitem>
+								<listitem>
+									<para>method: the protocol operation to be used to receive/transmit the instance data. Legal values are: 
+									"get" (to get a resource).</para>
+								</listitem>								
+							</itemizedlist>							
+						</listitem>
+					</itemizedlist>
+					<para><emphasis>Output:</emphasis></para>
+					<para>This method outputs data according to configuration options.</para>					
+				</listitem>
+				<listitem>
+					<para>load()</para>
+					<para>This method is used to register an XML document as data 
+						instance.
+					</para>					
+					<para><emphasis>Parameters:</emphasis></para>
+					<itemizedlist>
+						<listitem><para>oXMLDoc: the XML document.</para></listitem>
+					</itemizedlist>
+					<para><emphasis>Output:</emphasis></para>
+					<para>This method outputs nothing.</para>
+				</listitem>				
+			</itemizedlist>			
+			<example>
+				<title>Taking a snapshot with method snapshot() of instance() function</title>
+				<programlisting>$x.instance('instance1').snapshot('snapshot1');</programlisting>
+			</example>
+			<example>
+				<title>Getting the source of initial form of instance with method source() of instance() function</title>
+				<programlisting>$x.instance('instance1').source();</programlisting>
+			</example>
+			<example>
+				<title>Getting the source of a snapshot of instance with method source() of instance() function</title>
+				<programlisting>$x.instance('instance1').source('snapshot1');
+				</programlisting>
+			</example>
+			<example>
+				<title>Resetting an instance to its initial form with method reset() of instance() function</title>
+				<programlisting>$x.instance('instance1').reset();</programlisting>
+			</example>
+			<example>
+				<title>Resetting an instance to a snapshot of it with method reset() of instance() function</title>
+				<programlisting>$x.instance('instance1').reset('snapshot1');
+				</programlisting>
+			</example>
+			<example>
+				<title>Getting an instance with method submission() of instance() function</title>
+				<programlisting>$x.instance('instance1').submission({
+	"resource" : "http://127.0.0.1/tests/simpath/tests/data.xml",
+	"mode" : "synchronous",
+	"method" : "get"
+});
+				</programlisting>
+			</example>
+			<example>
+				<title>Registering a data instance with method load() of instance() function</title>
+				<programlisting>$x.instance('instance1').load(oXMLDoc);</programlisting>
+			</example>			
+			<sect3>
+				<title>Parameters</title>
+				<para/>
+			</sect3>			
+		</sect2>
+		<sect2>
+			<title>Function xpath()</title>
+			<para>This function is designated for evaluation of an XPath expression.</para>
+			<para>Simpath founds the evaluation context for the XPath expression as follows:</para>
+			<itemizedlist>
+				<listitem>
+					<para>In case when no data instance is specified by using the 
+						XPath extension function simpath:instance(), Simpath uses 
+						the "first instance" rule, namely the very first registered 
+						instance is used as evaluation context;
+					</para>
+				</listitem>
+				<listitem>
+					<para>In case when a data instance is specified by using the 
+						XPath extension function simpath:instance(), Simpath uses 
+						it as evaluation context.
+					</para>					
+				</listitem>				
+			</itemizedlist>
+			<para>The function can be used as such, if the XPath expressions 
+				are not reused. In case when they are used, one can use the function's 
+				method compile() to compile the XPath expression and store it in a 
+				variable, and the function's method evaluate() to evaluate the XPath 
+				expression anytime this is needed.</para>
+			<para><emphasis>Function parameters:</emphasis></para>
+			<itemizedlist>
+				<listitem><para>sXPathExpr: the XPath expression;</para></listitem>
+				<listitem>
+					<para>oXPathContext: the context used for XPath expression 
+						evaluation.</para>
+				</listitem>
+			</itemizedlist>
+			<para><emphasis>Function output:</emphasis></para>
+			<para>Function outputs the result of the XPath expression.</para>
+			<para><emphasis>Function methods:</emphasis></para>
+			<itemizedlist>
+				<listitem>
+					<para>compile()</para>
+					<para>This method is used for compiling the XPath expresssion and 
+						storing the compiled XPath expression for reuse.
+					</para>					
+					<para><emphasis>Parameters:</emphasis></para>
+					<itemizedlist>
+						<listitem><para>sXPathExpr: the XPath expression;</para></listitem>
+						<listitem>
+							<para>oXPathContext: the context used for XPath expression 
+								evaluation.</para>
+						</listitem>
+					</itemizedlist>
+					<para><emphasis>Output:</emphasis></para>
+					<para>This method outputs an JS array containing the ID 
+						of the stored compiled XPath expression, and the result 
+						of the XPath expression.</para>
+				</listitem>
+				<listitem>
+					<para>evaluate()</para>
+					<para>This method is used to evaluating a compiled XPath expression.
+					</para>					
+					<para><emphasis>Parameters:</emphasis></para>
+					<itemizedlist>
+						<listitem><para>nXPathExprId: the ID of the stored 
+								compiled XPath expression;</para></listitem>
+						<listitem>
+							<para>oXPathContext: the context used for XPath expression 
+								evaluation.</para>
+						</listitem>
+					</itemizedlist>
+					<para><emphasis>Output:</emphasis></para>
+					<para>This method outputs the result of the XPath expression.</para>
+				</listitem>
+			</itemizedlist>			
+		</sect2>
+		<sect2>
+			<title>Function setvalue()</title>
+			<para>This function sets the value of an element or attribute.</para>
+		</sect2>
+		<sect2>
+			<title>Function insert()</title>
+			<para/>
+		</sect2>
+		<sect2>
+			<title>Function delete()</title>
+			<para/>
+		</sect2>
+		<sect2>
+			<title>Function replace()</title>
+			<para/>
+		</sect2>
+		<sect2>
+			<title>Function reset()</title>
+			<para>This function resets Simpath. This means that all data instances and 
+			compiled XPath expressions are deleted.</para>
+		</sect2>
+		<sect2>
+			<title>XPath extension function simpath:instance()</title>
+			<para>This function allows access to data instances.</para>
+			<para><emphasis>Function parameters:</emphasis></para>
+			<itemizedlist>
+				<listitem><para>sInstanceId: the ID of the registered data instance;</para></listitem>
+			</itemizedlist>
+			<para><emphasis>Function output:</emphasis></para>
+			<para>Function outputs the root element node of the respective data instance.</para>
+			<example>
+				<title>Selection of a node in a data instance</title>
+				<programlisting>$x.xpath('simpath:instance('instance1')/node1);
+				</programlisting>
+			</example>			
+		</sect2>		
+	</sect1>	
+	<sect1>
+		<title>Extensions</title>
+		<para>//window.avg = function(a) {return 17;};
+			//alert($x.evaluate($x.compile("test-plan", "17 + avg(//div) + avg(//div)")));
+		</para>
+	</sect1>
+	<sect1>
+		<title>Dependencies</title>
+		<para>Simpath was built to work without dependencies.</para>
+	</sect1>
+</article>

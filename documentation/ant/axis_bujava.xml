@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<project default="main" basedir="..">
+	<property file="axis_bujava.properties" />
+
+	<echo message="Converting docbook to html ..." />
+	
+	<target name="main">
+		<exec dir="${basedir}" executable="xmlto" failonerror="true">
+			<arg line="xhtml -m config.xsl documentation.xml" />
+		</exec>
+	</target>
+
+</project>

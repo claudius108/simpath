@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequences xmlns:simpath="http://kuberam.ro/ns/simpath/">
+	<sequence xmlns="http://www.w3.org/1999/xhtml">
+		<document>
+			<element id="s1" node-name="dw:document-root" base-uri=""
+				document-uri="">
+				<namespace prefix="dw" uri="http://www.ibm.com/developerWorks/" />
+				<attribute name="id">s1</attribute>
+				<element id="s2" node-name="dw:input" base-uri=""
+					document-uri="" type-name="xs:string">
+					<namespace prefix="dw" uri="http://www.ibm.com/developerWorks/" />
+					<attribute name="id">s2</attribute>
+					<attribute name="name">hobbies</attribute>
+					<element id="s3" node-name="dw:item" base-uri=""
+						document-uri="" type-name="xs:string">
+						<namespace prefix="dw" uri="http://www.ibm.com/developerWorks/" />
+						<attribute name="id">s3</attribute>
+						<attribute name="name">dw:article1</attribute>
+						<text>item1 text</text>
+					</element>
+					<text>input1 text</text>
+				</element>
+				<element id="s4" node-name="dw:input" base-uri=""
+					document-uri="" type-name="xs:string">
+					<namespace prefix="dw" uri="http://www.ibm.com/developerWorks/" />
+					<attribute name="id">s4</attribute>
+					<attribute name="name">jobs</attribute>
+					<element id="s5" node-name="dw:item" base-uri=""
+						document-uri="" type-name="xs:string">
+						<namespace prefix="dw" uri="http://www.ibm.com/developerWorks/" />
+						<attribute name="id">s5</attribute>
+						<attribute name="name">dw:article2</attribute>
+						<text>item2 text</text>
+					</element>
+					<text>input2 text</text>
+				</element>
+				<element id="s6" node-name="dw:input" base-uri=""
+					document-uri="" type-name="xs:string">
+					<namespace prefix="dw" uri="http://www.ibm.com/developerWorks/" />
+					<attribute name="id">s6</attribute>
+					<attribute name="name">pleasures</attribute>
+					<element id="s7" node-name="dw:note" base-uri=""
+						document-uri="" type-name="xs:string">
+						<namespace prefix="dw" uri="http://www.ibm.com/developerWorks/" />
+						<attribute name="id">s7"</attribute>
+						<text>note text</text>
+					</element>
+					<text>input3 text</text>
+				</element>
+				<element id="s8" node-name="dw:item" base-uri=""
+					document-uri="" type-name="xs:string">
+					<namespace prefix="dw" uri="http://www.ibm.com/developerWorks/" />
+					<attribute name="id">s8</attribute>
+					<attribute name="name">dw:subtitle</attribute>
+					<text>item3 text</text>
+				</element>
+			</element>
+		</document>
+	</sequence>
+	<sequence xmlns="http://www.w3.org/1999/xhtml" length="1">
+	
+	
+	</sequence>	
+</sequences>

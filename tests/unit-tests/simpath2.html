@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:prefix1="http://kuberam.ro/prefix1" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:prefix2="http://kuberam.ro/prefix2">
+    <head>
+        <title>Test simpath</title>
+	<link rel="stylesheet" href="../../utils/kuberaForms/core/kF.css" type="text/css"/>
+        <script id="kF-core-script" type="text/javascript" src="../../utils/kuberaForms/core/xbl.js">/**/</script>
+        <xf:model>
+		<xf:instance id="instance1" xmlns="">
+			<invoices>
+				<invoice>
+					<id>2</id>
+					<docNo>0023454</docNo>
+					<data>1999-01-23</data>
+					<nume>Supplier name 1</nume>
+					<amount>234.32</amount>
+				</invoice>
+				<invoice>
+					<id>2</id>
+					<docNo>1345478</docNo>
+					<data>2000-01-23</data>
+					<nume>Supplier name 4</nume>
+					<amount2>1008</amount2>
+				</invoice>
+				<invoice>
+					<id>2</id>
+					<docNo>5489034</docNo>
+					<data>1999-05-19</data>
+					<nume>Supplier name 2</nume>
+					<amount>576.90</amount>
+				</invoice>
+				<invoice>
+					<id>2</id>
+					<docNo>4367843</docNo>
+					<data>1999-08-09</data>
+					<nume>Supplier name 3</nume>
+					<amount>349.00</amount>
+				</invoice>
+				<invoice>
+					<id>2</id>
+					<docNo>1187904</docNo>
+					<data>2000-04-28</data>
+					<nume>Supplier name 5</nume>
+					<amount>987.30</amount>
+				</invoice>
+				<invoice>
+					<id>2</id>
+					<docNo>4376891</docNo>
+					<data>2001-09-30</data>
+					<nume>Supplier name 7</nume>
+					<amount>2000.00</amount>
+				</invoice>
+				<invoice>
+					<id>2</id>
+					<docNo>9804521</docNo>
+					<data>2001-01-23</data>
+					<nume>Supplier name 6</nume>
+					<amount>108.00</amount>
+				</invoice>
+			</invoices>
+		</xf:instance>
+		<xf:instance id="instance2" xmlns="">
+			<a>
+				<text2 id="22">initial value 2</text2>
+			</a>
+		</xf:instance>
+		<xf:instance id="instance3">
+			<car>
+				<color>blue</color>
+			</car>
+		</xf:instance>
+        </xf:model>
+        <xf:model id="model2">
+		<xf:instance id="instance3" xmlns="">
+			<a>
+				<text2>initial value 2</text2>
+			</a>
+		</xf:instance>
+        </xf:model>
+    </head>
+    <body>
+<!--         <label for="input4">Example of instance() function. Syntax: "//*[local-name() = 'invoice'][number(id( 'instanceOne' )//*[local-name() = 'id']) + 1]/*[local-name() = 'amount']". </label> -->
+        <xf:input id="input1" ref="//*[local-name() = concat('amount', avg(//id))]">
+            <xf:label>Example of avg() function. Syntax: "//*[local-name() = concat('amount', avg(//id))]". </xf:label>
+        </xf:input>
+        <xf:input id="input2" ref="min(//amount)"></xf:input>
+        <xf:input id="input3" ref="max(//amount)" model="model2"></xf:input>
+	<xf:input ref="max(//amount)"></xf:input>
+        <xf:output id="output1" model="model1"></xf:output>
+	<xf:output id="output2" model="model1"></xf:output>
+<!--         <xf:label>Example of singleton label.</xf:label> -->
+        <div id="kFcounter">kFcounter</div>
+    </body>
+</html>

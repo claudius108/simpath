@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="pretty-print-countries.xsl"?>
+<countries>
+  <country id="au">Australia</country>
+  <country id="de">Germany</country>
+  <country id="fr">France</country>
+  <country id="ie">Ireland</country>
+  <country id="in">India</country>
+  <country id="jp">Japan</country>
+</countries>

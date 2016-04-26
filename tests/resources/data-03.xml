@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dw:document-root xmlns:dw="http://www.ibm.com/developerWorks/">
+	<item>
+
+	</item>
+	<dw:input id="input-01" name="hobbies">
+		<dw:item name="dw:article1">
+
+		</dw:item>
+	</dw:input>
+	<dw:item name="dw:subtitle1">
+
+	</dw:item>
+	<dw:input name="jobs">
+		<dw:item name="dw:article2">
+
+		</dw:item>
+	</dw:input>
+	<dw:input name="pleasures">
+		<dw:item name="dw:article3">
+
+		</dw:item>
+	</dw:input>
+	<dw:item name="dw:subtitle2">
+
+	</dw:item>
+</dw:document-root>

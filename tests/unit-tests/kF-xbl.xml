@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbl:xbl xmlns="http://www.w3.org/1999/xhtml" xmlns:xbl="http://www.w3.org/ns/xbl">
+    <xbl:binding id="input">
+        <xbl:implementation><![CDATA[
+		({
+			"refresh" : function() {
+				var XPathFunctions = kF.simPath.functions,
+					kFxpath = kF.simPath.kFxpath
+					xpathExprProcessed = kFxpath.kFvalueOf( document, this.preparedRef, 'xforms-compute-exception' );
+				this.value = xpathExprProcessed;
+			},
+			"preparedRef" : "",
+			"prepareRef" : function() {
+				var refString = this.getAttribute( 'ref' );
+				var XPathFunctionsList = kF.simPath.xformsFunctionsList;
+				//process XForms functions
+				for ( XPathFunction in XPathFunctionsList ) {
+					if( refString.indexOf( XPathFunction + "(" ) != -1 ) {
+						refString = refString.replace( new RegExp( XPathFunction + "\\(" ), "\" + kF.simPath.xformsFunctions." + XPathFunction + "(\"");
+					}
+				}
+				this.preparedRef = "\"" + refString
+					.replace( new RegExp( "\\)", "gi" ), "\") + \"" ) //replace |)| with |") + "|
+					.replace( new RegExp( "\\(\"\\) \\+ \"", "gi" ), "()" ) //replace |(")| with |()|
+					.replace( new RegExp( "\\+ \"\"\\)", "gi" ), "+ \")\"" ) + "\""; //replace |+ "")| with |+ ")"|
+					
+					//for xforms or extension function |+ "")) + "| to be replaced with | ) |
+					//for xpath function |+ "")) + "| to be replaced with | ") |
+				//alert( eval(this.preparedRef) );
+			}
+		})
+		]]></xbl:implementation>
+    </xbl:binding>
+</xbl:xbl>

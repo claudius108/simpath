@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="send-form-letter.xsl"?>
+<victim>
+  <title>Frau</title>
+  <name>Schmidt</name>
+  <country idref="de"/>
+</victim>
